@@ -7,8 +7,15 @@
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
+
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <include src="./partials/header-home.html"></include>
+    <main>
+      <aside>
+        <include src="./partials/all-category.html"></include>
+        <include src="./partials/support-ukraine.html"></include>
+      </aside>
+      <include src="./partials/home-gallery.html"></include>
+    </main>
   </body>
 </html>

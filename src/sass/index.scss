@@ -1,2 +1,12 @@
 @import './common';
-@import './example';
+@import './base/reset';
+
+@import './helpers/hidden';
+@import './helpers/mixins';
+@import './helpers/vars';
+
+@import './base/container';
+@import './layout/header';
+@import './layout/home-gallery';
+@import './layout/shopping-gallery';
+@import './layout/footer';
