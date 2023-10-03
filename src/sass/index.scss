@@ -5,6 +5,9 @@
 @import './helpers/mixins';
 @import './helpers/vars';
 
+@import './components/_card-for-shopping';
+@import './components/_empty-shoping-list';
+
 @import './base/container';
 @import './layout/header';
 @import './layout/home-gallery';
