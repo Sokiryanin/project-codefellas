@@ -1,0 +1,34 @@
+.shopping-list {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-color: var(--background-main);
+}
+
+.shopping-list__title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: -1.28px;
+
+  color: var(--main-textcolor);
+
+  & .shopping-list__title-second-word {
+    color: var(--main-color);
+  }
+
+  @include tablet {
+    font-size: 48px;
+
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+}
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+}
