@@ -1,0 +1,75 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M481.69 452.263c3.966-3.999 8.685-7.173 13.885-9.339s10.775-3.281 16.407-3.281c5.632 0 11.208 1.115 16.407 3.281s9.919 5.34 13.885 9.339l195.416 195.84c3.966 3.998 8.685 7.173 13.885 9.337 5.199 2.169 10.775 3.281 16.407 3.281s11.208-1.112 16.407-3.281c5.199-2.164 9.919-5.339 13.885-9.337 7.95-7.997 12.409-18.809 12.409-30.082 0-11.269-4.459-22.086-12.409-30.078l-195.84-195.84c-23.999-23.97-56.534-37.434-90.452-37.434-33.922 0-66.454 13.464-90.454 37.434l-195.84 195.84c-7.882 7.945-12.326 18.674-12.373 29.868-0.033 5.613 1.044 11.18 3.167 16.379s5.252 9.923 9.206 13.912c3.967 3.998 8.685 7.173 13.885 9.337 5.2 2.169 10.776 3.281 16.409 3.281s11.21-1.112 16.409-3.281c5.2-2.164 9.918-5.339 13.885-9.337l195.416-195.84z"
+        ],
+        "attrs": [
+          {
+            "fill": "rgb(79, 46, 232)"
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": [
+          "arrow-up"
+        ]
+      },
+      "attrs": [
+        {
+          "fill": "rgb(79, 46, 232)"
+        }
+      ],
+      "properties": {
+        "order": 2,
+        "id": 0,
+        "name": "arrow-up",
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    }
+  ],
+  "height": 1024,
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "name": "icomoon",
+      "height": 32,
+      "columns": 16,
+      "margin": 16,
+      "autoHost": true
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16,
+    "quickUsageToken": {
+      "UntitledProject": null
+    }
+  }
+}
