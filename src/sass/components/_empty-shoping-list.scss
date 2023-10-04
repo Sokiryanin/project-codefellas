@@ -1,0 +1,37 @@
+.empty-shoping-list {
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 265px;
+
+  @include tablet {
+    margin-top: 140px;
+    width: 349px;
+  }
+}
+
+.empty-shoping-list__text {
+  margin-bottom: 14px;
+
+  line-height: 1.29;
+  letter-spacing: -0.28px;
+  text-align: center;
+
+  color: rgba(0, 0, 0, 0.6);
+
+  @include tablet {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.36px;
+  }
+}
+
+.empty-shoping-list__image {
+  width: 100%;
+  height: 198px;
+
+  @include tablet {
+    height: 241px;
+  }
+}

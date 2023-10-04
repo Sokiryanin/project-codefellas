@@ -1,0 +1,183 @@
+.books-card {
+  position: relative;
+  display: flex;
+  gap: 14px;
+  padding: 14px;
+  width: 100%;
+
+  background-color: var(--white);
+
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+
+  @include tablet {
+    gap: 24px;
+    padding: 30px 24px;
+  }
+}
+
+.books-card__image {
+  min-width: 100px;
+
+  border-radius: 8px;
+  overflow: hidden;
+
+  @include tablet {
+    max-width: 116px;
+  }
+}
+
+.books-card__info {
+  width: 100%;
+}
+
+.books-card__title {
+  @media screen and (max-width: 767px) {
+    max-width: 144px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  margin-bottom: 4px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.13;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+
+  color: var(--main-textcolor);
+}
+
+.books-card__category {
+  margin-bottom: 8px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.36px;
+
+  color: var(--light-text);
+
+  @include tablet {
+    margin-bottom: 14px;
+  }
+}
+
+.books-card__description {
+  position: relative;
+  margin-bottom: 28px;
+  height: 3.5rem;
+
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+
+  color: var(--main-textcolor);
+
+  overflow: hidden;
+  //   text-overflow: ellipsis;
+
+  //   &::after {
+  //     content: '...';
+  //     position: absolute;
+  //     bottom: 0;
+  //     right: 0;
+
+  //     background-color: white;
+  //   }
+
+  @include tablet {
+    margin-bottom: 48px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.books-card__author {
+  font-size: 12px;
+  font-style: italic;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
+
+  color: var(--light-text);
+}
+
+.wrapper-links {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+
+  @include tablet {
+    gap: 16px;
+  }
+}
+
+.books-card__image-amazon {
+  width: 32px;
+  height: 11px;
+  filter: grayscale(100%);
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+  }
+
+  @include tablet {
+    width: 48px;
+    height: 15px;
+  }
+}
+
+.books-card__image-appleBooks {
+  width: 16px;
+  height: 16px;
+  filter: grayscale(100%);
+
+  @include tablet {
+    width: 28px;
+    height: 28px;
+  }
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+  }
+}
+
+.button__delete {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  display: block;
+  padding: 6px;
+  width: 28px;
+  height: 28px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--main-color);
+
+  @include tablet {
+    top: 30px;
+    right: 24px;
+    padding: 8px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.button__icon {
+  width: 16px;
+  height: 16px;
+
+  @include tablet {
+    width: 18px;
+    height: 18px;
+  }
+}
