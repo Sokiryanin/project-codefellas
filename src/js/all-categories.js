@@ -42,6 +42,6 @@ function currentCategory(e) {
   if (currentEl.textContent === 'All categories') {
     console.log('BestBooks');
   } else {
-    console.log('Another categorie');
+    console.log('Another category');
   }
 }

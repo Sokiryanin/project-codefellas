@@ -75,6 +75,10 @@
   letter-spacing: -0.56px;
 }
 
+// .support__btn.swiper-btn__up {
+//   display: none;
+// }
+
 .support__btn {
   display: flex;
   justify-content: center;
@@ -95,10 +99,6 @@
 }
 .support__btn:active {
   box-shadow: -2px -1px 24px 1px rgba(255, 255, 255, 1);
-}
-
-.support__btn[hidden] {
-  display: none;
 }
 
 .support-btn__icon__top {

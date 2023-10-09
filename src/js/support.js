@@ -4,34 +4,25 @@ import { supportData } from './support-list';
 const supportList = document.querySelector('.support__list-js');
 const swiperDown = document.querySelector('.swiper-btn__down');
 const swiperUp = document.querySelector('.swiper-btn__up');
-
-let activeSwipeElemenet = 0;
-
-if (window.innerWidth >= 768) {
-  activeSwipeElemenet = 3;
-} else {
-  activeSwipeElemenet = 5;
-}
+swiperUp.style.display = 'none'; // Відобразити кнопку "вгору"
 
 swiperDown.addEventListener('click', () => {
-  swiper.slideNext();
+  swiper.slideNext(); // Прокрутити вниз на один слайд
 
-  if (
-    supportList.children[activeSwipeElemenet].classList.contains(
-      'swiper-slide-active'
-    )
-  ) {
-    swiperDown.hidden = true;
-    swiperUp.hidden = false;
+  // Перевірити, чи досягнута остання група слайдів
+  if (swiper.isEnd) {
+    swiperDown.style.display = 'none'; // Приховати кнопку "вниз"
+    swiperUp.style.display = 'block'; // Відобразити кнопку "вгору"
   }
 });
 
 swiperUp.addEventListener('click', () => {
-  swiper.slidePrev();
+  swiper.slidePrev(); // Прокрутити вгору на один слайд
 
-  if (supportList.children[0].classList.contains('swiper-slide-active')) {
-    swiperDown.hidden = false;
-    swiperUp.hidden = true;
+  // Перевірити, чи досягнута початкова група слайдів
+  if (swiper.isBeginning) {
+    swiperDown.style.display = 'block'; // Відобразити кнопку "вниз"
+    swiperUp.style.display = 'none'; // Приховати кнопку "вгору"
   }
 });
 
