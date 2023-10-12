@@ -3,7 +3,6 @@ import { refs } from './refs';
 import amazon from '../images/amazon.png';
 import appleBooks from '../images/appleshop.png';
 import svg from '../images/icon-trash.svg';
-import booksImage from '../images/empty-shopping-list.png';
 
 async function qwe() {
   try {
@@ -13,8 +12,9 @@ async function qwe() {
 
     const a = data[1]['books'];
     const b = data[2]['books'];
+    const c = data[4]['books'];
 
-    const shoppingList = [...a, ...b];
+    const shoppingList = [...a, ...b, ...c];
 
     const shoppingListToSave = shoppingList.reduce((acc, item) => {
       acc.push({
@@ -42,15 +42,12 @@ async function qwe() {
 qwe();
 
 ///////////////////////////////////////////
-export default function addBooksInShoppingList() {
+export default function createMarkupShoppingList(visibleBooks) {
   const booksList = refs.booksInShoppingList;
 
-  const shoppingList = JSON.parse(window.localStorage.getItem('shoppingList'));
-
-  if (shoppingList && shoppingList.length > 0) {
-    const markup = shoppingList
-      .map(({ id, author, title, image, description, category, links }) => {
-        return ` 
+  const markup = visibleBooks
+    .map(({ id, author, title, image, description, category, links }) => {
+      return ` 
       <li class="books-card" id=${id}>
         <img
           class="books-card__image"
@@ -81,27 +78,8 @@ export default function addBooksInShoppingList() {
         </button>
       </li>
     `;
-      })
-      .join('');
+    })
+    .join('');
 
-    booksList.innerHTML = markup;
-  } else {
-    const markup = `
-    <div class="empty-shoping-list">
-      <p class="empty-shoping-list__text">
-        This page is empty, add some books and proceed to order.
-      </p>
-      <img
-        src=${booksImage}
-        alt="Four books"
-        class="empty-shoping-list__image"
-      />
-    </div>
-    `;
-
-    booksList.innerHTML = '';
-    refs.titleShoppingList.insertAdjacentHTML('afterend', markup);
-  }
+  booksList.innerHTML = markup;
 }
-
-addBooksInShoppingList();

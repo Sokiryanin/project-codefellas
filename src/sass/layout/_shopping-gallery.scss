@@ -1,8 +1,22 @@
-.shopping-list {
-  padding-top: 40px;
-  padding-bottom: 40px;
-
+.wrapper__sopping-list {
   background-color: var(--background-main);
+}
+
+.container__sopping-list {
+  display: flex;
+  gap: 40px;
+}
+
+.shopping-list {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 100px;
+
+  min-height: 100vh;
+
+  @include tablet {
+    padding-bottom: 124px;
+  }
 }
 
 .shopping-list__title {
@@ -31,4 +45,13 @@
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 40px;
+}
+
+.support__sopping-list {
+  display: none;
+  margin: 40px 0 0;
+
+  @include desktop {
+    display: flex;
+  }
 }

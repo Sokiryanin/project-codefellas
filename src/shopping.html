@@ -5,6 +5,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf</title>
+    <link rel="shortcut icon" href="./images/logo.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,12 +17,14 @@
   </head>
   <!-- <include src="./partials/example.html"></include> -->
   <body>
-    <include src="./partials/header-shopping.html"></include>
+    <include src="./partials/header-home.html"></include>
     <main>
-      <aside>
-        <include src="./partials/support-ukraine.html"></include>
-      </aside>
-      <include src="./partials/shopping-gallary.html"></include>
+      <div class="wrapper__sopping-list">
+        <div class="container container__sopping-list">
+          <include src="./partials/support-ukraine.html"></include>
+          <include src="./partials/shopping-gallary.html"></include>
+        </div>
+      </div>
     </main>
     <include src="./partials/footer.html"></include>
     <script type="module" src="./shopping.js"></script>

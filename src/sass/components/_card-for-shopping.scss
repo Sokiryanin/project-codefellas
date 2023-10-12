@@ -17,18 +17,24 @@
 }
 
 .books-card__image {
+  max-width: 100px;
   min-width: 100px;
+  height: 142px;
 
   border-radius: 8px;
   overflow: hidden;
 
   @include tablet {
     max-width: 116px;
+    min-width: 116px;
+    height: 165px;
   }
 }
 
 .books-card__info {
-  width: 100%;
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .books-card__title {
@@ -51,6 +57,13 @@
 }
 
 .books-card__category {
+  @media screen and (max-width: 767px) {
+    max-width: 144px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   margin-bottom: 8px;
 
   font-size: 12px;
@@ -66,7 +79,7 @@
 
 .books-card__description {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   height: 3.5rem;
 
   line-height: 1.29;
@@ -87,17 +100,24 @@
   //   }
 
   @include tablet {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .books-card__author {
+  @media screen and (max-width: 767px) {
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   font-size: 12px;
   font-style: italic;
   line-height: 1.17;

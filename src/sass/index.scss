@@ -5,9 +5,6 @@
 @import './helpers/mixins';
 @import './helpers/vars';
 
-@import './components/_card-for-shopping';
-@import './components/_empty-shoping-list';
-
 @import './base/container';
 @import './layout/header';
 @import './layout/all-categories';
@@ -15,3 +12,7 @@
 @import './layout/home-gallery';
 @import './layout/shopping-gallery';
 @import './layout/footer';
+
+@import './components/_card-for-shopping';
+@import './components/_empty-shoping-list';
+@import './components/pagination';
