@@ -7,22 +7,20 @@ const swiperUp = document.querySelector('.swiper-btn__up');
 swiperUp.style.display = 'none'; // Відобразити кнопку "вгору"
 
 swiperDown.addEventListener('click', () => {
-  swiper.slideNext(); // Прокрутити вниз на один слайд
+  swiper.slideNext();
 
-  // Перевірити, чи досягнута остання група слайдів
   if (swiper.isEnd) {
-    swiperDown.style.display = 'none'; // Приховати кнопку "вниз"
-    swiperUp.style.display = 'block'; // Відобразити кнопку "вгору"
+    swiperDown.style.display = 'none';
+    swiperUp.style.display = 'block';
   }
 });
 
 swiperUp.addEventListener('click', () => {
-  swiper.slidePrev(); // Прокрутити вгору на один слайд
+  swiper.slidePrev();
 
-  // Перевірити, чи досягнута початкова група слайдів
   if (swiper.isBeginning) {
-    swiperDown.style.display = 'block'; // Відобразити кнопку "вниз"
-    swiperUp.style.display = 'none'; // Приховати кнопку "вгору"
+    swiperDown.style.display = 'block';
+    swiperUp.style.display = 'none';
   }
 });
 
