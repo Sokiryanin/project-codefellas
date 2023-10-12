@@ -8,10 +8,18 @@
 
   @include tablet {
     max-width: 768px;
+    padding: 0 32px;
   }
 
-  @include desktop {
-    max-width: 1280px;
+  @include desktopBig {
+    max-width: 1600px;
     padding: 0 24px;
+  }
+}
+
+.flex__container {
+  @include desktopBig {
+    display: flex;
+    gap: 40px;
   }
 }

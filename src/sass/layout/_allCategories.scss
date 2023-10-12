@@ -44,7 +44,7 @@ a.current {
 
 @include tablet {
   .categories {
-    max-width: 337px;
+    width: 337px;
     height: 472px;
     margin-bottom: 0;
 
@@ -57,5 +57,11 @@ a.current {
       font-size: 18px;
       line-height: 1.33;
     }
+  }
+}
+
+@include desktopBig {
+  .categories {
+    margin-bottom: 86px;
   }
 }

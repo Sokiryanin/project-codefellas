@@ -1,4 +1,5 @@
 import './js/fetch';
-import './js/all-categories';
+import './js/allCategories';
 import './js/support';
 import './js/bestBooks';
+import './js/selectedCategory';

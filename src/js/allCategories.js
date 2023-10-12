@@ -1,6 +1,7 @@
 import { renderCategory } from './bestBooks';
 import { getAllCategories } from './fetch';
 import { refs } from './refs';
+import { onClickCategory } from './selectedCategory';
 
 const list = refs.categoriesList;
 
@@ -40,8 +41,10 @@ function currentCategory(e) {
   currentEl.classList.add('current');
 
   if (currentEl.textContent === 'All categories') {
-    console.log('BestBooks');
+    renderCategory();
+    // console.log('BestBooks');
   } else {
-    console.log('Another category');
+    onClickCategory(e.target.textContent);
+    // console.log('Another category');
   }
 }
