@@ -18,6 +18,8 @@
 }
 
 .flex__container {
+  padding: 40px 0;
+
   @include desktopBig {
     display: flex;
     gap: 40px;
