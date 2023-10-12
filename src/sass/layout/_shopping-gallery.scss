@@ -12,10 +12,12 @@
   padding-top: 40px;
   padding-bottom: 100px;
 
-  min-height: 100vh;
+  width: 100%;
+  min-height: calc(100vh - 70px);
 
   @include tablet {
     padding-bottom: 124px;
+    min-height: calc(100vh - 95px);
   }
 }
 
