@@ -1,3 +1,4 @@
+import './js/support';
 import './js/createMarkupShoppingList';
 import './js/createMarkupEmptyPage';
 import './js/getVisibleBooks';
