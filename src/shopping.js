@@ -1,3 +1,4 @@
+import './js/burger-menu';
 import './js/support';
 import './js/createMarkupShoppingList';
 import './js/createMarkupEmptyPage';
