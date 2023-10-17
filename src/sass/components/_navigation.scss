@@ -1,0 +1,62 @@
+.navigation {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+    margin-left: 40px;
+  }
+
+  @include desktop {
+    margin-left: 76px;
+  }
+}
+
+.navigation.burger-navigation {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 258px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.navigation__link {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 8px 16px;
+
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+
+  color: var(--main-textcolor);
+
+  &.is-active {
+    border-radius: 36px;
+    background-color: var(--accent-color);
+  }
+
+  & svg {
+    color: inherit;
+  }
+}
