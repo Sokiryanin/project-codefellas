@@ -1,10 +1,13 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 24px;
   border-radius: 0px 0px 8px 8px;
   border: 1.5px solid var(--main-textcolor);
+  background-color: var(--white);
+  z-index: 10;
 
   &__logo {
     display: flex;
@@ -38,6 +41,13 @@
       border: 1.5px solid var(--main-textcolor);
       border-radius: 18px;
     }
+  }
+}
+
+.header__wrapper {
+  @include tablet {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -97,4 +107,34 @@ input[type='checkbox'].toggle:disabled + label::before {
 
 input[type='checkbox'].toggle:disabled + label::after {
   background-color: #777;
+}
+
+// button burger-menu------------------//
+.burger-btn {
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  fill: var(--main-textcolor);
+  transition: fill 300ms;
+
+  @include tablet {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: var(--main-color);
+  }
+
+  & .is-open {
+    display: none;
+  }
+
+  & .is-close {
+    display: none;
+  }
 }

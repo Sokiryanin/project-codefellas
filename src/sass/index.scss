@@ -15,6 +15,10 @@
 @import './layout/shopping-gallery';
 @import './layout/footer';
 
-@import './components/_card-for-shopping';
-@import './components/_empty-shoping-list';
+@import './components/navigation';
+@import './components/burger-menu';
+@import './components/btn-log-out';
+
+@import './components/card-for-shopping';
+@import './components/empty-shoping-list';
 @import './components/pagination';

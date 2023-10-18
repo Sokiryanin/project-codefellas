@@ -1,0 +1,33 @@
+.btn-log-out {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 24px;
+
+  border-radius: 18px;
+  border: 1.5px solid var(--main-textcolor);
+
+  background: var(--white);
+
+  @include tablet {
+    gap: 90px;
+    padding: 14px;
+  }
+}
+
+.btn-log-out__text {
+  color: #111;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+
+  color: var(--main-textcolor);
+}

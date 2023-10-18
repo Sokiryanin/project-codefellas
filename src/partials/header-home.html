@@ -1,22 +1,46 @@
 <header class="header">
-  <div class="header__logo">
-    <img src="./images/logo.svg" alt="Logo">
-    <img src="./images/bookshelf.svg" alt="Logo">
+  <div class="header__wrapper">
+    <a href="./index.html" class="header__logo">
+      <img src="./images/logo.svg" alt="Logo" />
+      <img src="./images/bookshelf.svg" alt="Logo" />
+    </a>
+
+    <ul class="navigation">
+      <li class="navigation__item">
+        <a href="./index.html" class="navigation__link is-active">Home</a>
+      </li>
+      <li class="navigation__item">
+        <a href="./shopping.html" class="navigation__link">
+          <span>Shopping list</span>
+          <svg width="20px" height="20px">
+            <use href="./images/symbol-defs.svg#icon-shoppingList-nav"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 
   <div class="header__buttons">
     <div class="header__theme-switcher">
-      <input type="checkbox" id="check1" class="toggle">
+      <input type="checkbox" id="check1" class="toggle" />
       <label for="check1"></label>
     </div>
     <button class="header__register-btn">
       <span>Sign up</span>
-      <img src="./images/arrow-narrow-right.svg" alt="Arrow">
+      <img src="./images/arrow-narrow-right.svg" alt="Arrow" />
     </button>
-    <!-- <button class="header__burger-btn">
-      <svg width="12px" height="12px">
-        <use href="./images/sprite.svg#icon-burger"></use>
+
+    <button class="burger-btn">
+      <svg width="28px" height="28px">
+        <use
+          href="./images/symbol-defs.svg#icon-menu"
+          class="burger-btn__menu-icon"
+        ></use>
+        <use
+          href="./images/symbol-defs.svg#icon-close"
+          class="burger-btn__close-icon is-close"
+        ></use>
       </svg>
-    </button> -->
+    </button>
   </div>
 </header>
