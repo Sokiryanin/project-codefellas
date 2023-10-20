@@ -1,4 +1,5 @@
 import { getByCategory } from './fetch';
+import { showModal } from './modal';
 import { refs } from './refs';
 
 const containerRef = refs.selectedCattegory;
@@ -13,6 +14,7 @@ export function onClickCategory(category) {
 
 function renderCategory(mark) {
   containerRef.innerHTML = mark;
+  showModal();
 }
 
 function getMarkCategory(array) {

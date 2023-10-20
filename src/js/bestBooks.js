@@ -1,9 +1,11 @@
 import { getTopBooks } from './fetch';
+import { showModal } from './modal';
 import { refs } from './refs';
 import { markLastWord, onClickCategory } from './selectedCategory';
 
 function renderBooks(mark) {
   refs.selectedCattegory.innerHTML = mark;
+  showModal();
 }
 
 function renderBookCard(book) {

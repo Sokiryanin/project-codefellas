@@ -1,3 +1,4 @@
+import './js/modal';
 import './js/burger-menu';
 import './js/fetch';
 import './js/allCategories';

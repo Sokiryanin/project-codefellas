@@ -10,4 +10,16 @@ export const refs = {
   btnBurgerMenu: document.querySelector('.burger-btn'),
   btnOpenMenuIcon: document.querySelector('.burger-btn__menu-icon'),
   btnCloseMenuIcon: document.querySelector('.burger-btn__close-icon'),
+  // modal
+  modalWindow: document.querySelector('.modal'),
+  modalCloseBtn: document.querySelector('.modal__close'),
+  modalImage: document.querySelector('.modal__image'),
+  modalTitle: document.querySelector('.modal__content-title'),
+  modalAuthor: document.querySelector('.modal__content-author'),
+  modalDescription: document.querySelector('.modal__content-description'),
+  modalLinkAmazon: document.querySelector('.modal__link-amazon'),
+  modalLinkApple: document.querySelector('.modal__link-apple'),
+  modalLinkShop: document.querySelector('.modal__link-shop'),
+  modalButton: document.querySelector('.modal__button'),
+  modalUserInfo: document.querySelector('.modal__user-info'),
 };
