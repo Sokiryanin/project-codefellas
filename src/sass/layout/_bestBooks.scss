@@ -6,6 +6,13 @@
   line-height: 1.187; /* 118.75% */
   letter-spacing: -1.28px;
   margin-bottom: 40px;
+  @include tablet {
+    color: #111;
+
+    font-size: 48px;
+    line-height: 1.08; /* 108.333% */
+    letter-spacing: -1.92px;
+  }
 }
 
 .title__last-word {
@@ -86,6 +93,10 @@
   @include tablet {
     width: 218px;
     height: 316px;
+  }
+  @include desktopBig {
+    width: 180px;
+    height: 256px;
   }
 }
 

@@ -43,6 +43,10 @@
     width: 218px;
     height: 316px;
   }
+  @include desktopBig {
+    width: 180px;
+    height: 256px;
+  }
 }
 
 .category__item-title {
