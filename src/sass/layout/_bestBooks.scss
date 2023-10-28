@@ -3,14 +3,14 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.187; /* 118.75% */
+  line-height: 1.187;
   letter-spacing: -1.28px;
   margin-bottom: 40px;
   @include tablet {
     color: #111;
 
     font-size: 48px;
-    line-height: 1.08; /* 108.333% */
+    line-height: 1.08;
     letter-spacing: -1.92px;
   }
 }
@@ -43,9 +43,11 @@
 
   @include tablet {
     gap: 25px;
+    margin-bottom: 20px;
   }
   @include desktopBig {
     gap: 24px;
+    margin-bottom: 36px;
   }
 }
 
@@ -57,7 +59,8 @@
   }
 
   @include desktopBig {
-    width: calc((100% - 100px) / 5);
+    width: 180px;
+    height: 306px;
   }
 }
 
@@ -107,6 +110,18 @@
   line-height: 1.125;
   letter-spacing: -0.64px;
   margin-bottom: 4px;
+
+  max-width: 330px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include tablet {
+    max-width: 215px;
+  }
+  @include desktopBig {
+    max-width: 178px;
+  }
 }
 
 .best-book__author {
@@ -117,6 +132,18 @@
   font-weight: 400;
   line-height: 1.167;
   letter-spacing: -0.48px;
+
+  max-width: 330px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include tablet {
+    max-width: 215px;
+  }
+  @include desktopBig {
+    max-width: 178px;
+  }
 }
 
 .seemore__btn {

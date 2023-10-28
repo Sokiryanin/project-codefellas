@@ -2,6 +2,7 @@ import { refs } from './refs';
 import { getBookById } from './fetch';
 
 const storageKey = 'shoppingList';
+let selectedBook = null;
 
 // Функция для отображения модального окна
 export function showModal() {
@@ -11,7 +12,6 @@ export function showModal() {
   elements.forEach(element => {
     element.addEventListener('click', () => handleElementClick(element));
   });
-
   function handleElementClick(element) {
     clearModal();
     const elId = element.dataset.id;
@@ -19,10 +19,13 @@ export function showModal() {
     // Загружаем информацию о книге по её ID
     getBookById(elId)
       .then(resp => {
+        console.log(resp);
         updateModalContent(resp);
-        updateShoppingButton(resp.title);
+        updateShoppingButton(resp._id); // Используем _id из ответа сервера
         openModal();
         document.addEventListener('keydown', onEscape);
+
+        selectedBook = resp;
       })
       .catch(error => {
         console.error('Error fetching book data:', error);
@@ -30,7 +33,7 @@ export function showModal() {
   }
 
   function updateModalContent(bookData) {
-    const { author, title, description, book_image, buy_links } = bookData;
+    const { author, title, description, book_image, buy_links, _id } = bookData;
 
     refs.modalAuthor.textContent = author;
     refs.modalTitle.textContent = title;
@@ -41,9 +44,9 @@ export function showModal() {
     refs.modalLinkShop.setAttribute('href', buy_links[4].url);
   }
 
-  function updateShoppingButton(title) {
+  function updateShoppingButton(_id) {
     const shoppingList = JSON.parse(localStorage.getItem(storageKey)) || [];
-    const bookIndex = shoppingList.findIndex(item => item.title === title);
+    const bookIndex = shoppingList.findIndex(item => item._id === _id);
 
     if (bookIndex === -1) {
       refs.modalButton.textContent = 'Add to shopping list';
@@ -100,6 +103,10 @@ refs.modalButton.addEventListener('click', buttonChange);
 
 // Функция для добавления/удаления книги из списка покупок
 function buttonChange() {
+  if (!selectedBook) {
+    return; // Если нет выбранной книги, не выполняем ничего
+  }
+
   const bookData = {
     author: refs.modalAuthor.textContent,
     title: refs.modalTitle.textContent,
@@ -110,14 +117,13 @@ function buttonChange() {
       { url: refs.modalLinkApple.getAttribute('href') },
       { url: refs.modalLinkShop.getAttribute('href') },
     ],
+    _id: selectedBook._id,
   };
 
   const shoppingList = JSON.parse(localStorage.getItem(storageKey)) || [];
-  const bookIndex = shoppingList.findIndex(
-    item => item.title === bookData.title
-  );
+  const bookIndex = shoppingList.findIndex(item => item._id === bookData._id);
 
-  if (bookIndex === -1) {
+  if (refs.modalButton.textContent === 'Add to shopping list') {
     shoppingList.push(bookData);
     localStorage.setItem(storageKey, JSON.stringify(shoppingList));
     refs.modalButton.textContent = 'Remove from the shopping list';
@@ -130,3 +136,5 @@ function buttonChange() {
     refs.modalUserInfo.textContent = '';
   }
 }
+
+// ================================================================

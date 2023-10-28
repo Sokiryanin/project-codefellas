@@ -1,9 +1,9 @@
 @import './common';
+@import './helpers/mixins';
 @import './layout/modal';
 @import './base/reset';
 
 @import './helpers/hidden';
-@import './helpers/mixins';
 @import './helpers/vars';
 
 @import './base/container';
