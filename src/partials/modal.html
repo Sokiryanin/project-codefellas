@@ -1,6 +1,10 @@
 <section class="modal visually-hidden">
-  <div class="modal__container">
-    <button class="modal__close">Х</button>
+  <div class="modal__container" data-id="">
+    <button class="modal__close">
+      <svg class="modal-x-svg">
+        <use href="./images/sprite.svg#icon-x-close"></use>
+      </svg>
+    </button>
     <div class="modal__info">
       <img
         class="modal__image"
@@ -19,7 +23,6 @@
               srcset="./images/amazon2x.png"
               src="./images/amazon.png"
               alt="amazon"
-              height="19"
           /></a>
           <a class="modal__link-apple" href="" target="_blank"
             ><img
@@ -27,7 +30,6 @@
               srcset="./images/appleshop2x.png"
               src="./images/appleshop.png"
               alt="apple-books"
-              height="32"
           /></a>
           <a class="modal__link-shop" href="" target="_blank"
             ><img
@@ -35,7 +37,6 @@
               srcset="./images/boockshop2x.png"
               src="./images/boockshop.png"
               alt="book-shop"
-              height="36"
           /></a>
         </div>
       </div>

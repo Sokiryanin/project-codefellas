@@ -51,11 +51,25 @@
 
 .category__item-title {
   color: var(--main-textcolor);
+  font-family: DM Sans;
   font-size: 16px;
-  font-style: normal;
-  line-height: 1.125;
+  font-weight: 700;
+  line-height: 1.125; /* 112.5% */
   letter-spacing: -0.64px;
+
   margin-bottom: 4px;
+
+  max-width: 330px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include tablet {
+    max-width: 215px;
+  }
+  @include desktopBig {
+    max-width: 178px;
+  }
 }
 
 .category__item-author {
@@ -66,6 +80,18 @@
   font-weight: 400;
   line-height: 1.167;
   letter-spacing: -0.48px;
+
+  max-width: 330px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include tablet {
+    max-width: 215px;
+  }
+  @include desktopBig {
+    max-width: 178px;
+  }
 }
 
 .category__pop-up-text {
@@ -110,7 +136,8 @@
   }
 
   @include desktopBig {
-    width: calc((100% - 100px) / 5);
+    width: 180px;
+    height: 306px;
   }
 }
 
