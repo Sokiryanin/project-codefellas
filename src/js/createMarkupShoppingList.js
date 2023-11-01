@@ -4,50 +4,59 @@ import amazon from '../images/amazon.png';
 import appleBooks from '../images/appleshop.png';
 import svg from '../images/icon-trash.svg';
 
-async function qwe() {
-  try {
-    const { data } = await axios.get(
-      'https://books-backend.p.goit.global/books/top-books'
-    );
+// async function qwe() {
+//   try {
+//     const { data } = await axios.get(
+//       'https://books-backend.p.goit.global/books/top-books'
+//     );
 
-    const a = data[1]['books'];
-    const b = data[2]['books'];
-    const c = data[4]['books'];
+//     const a = data[1]['books'];
+//     const b = data[2]['books'];
+//     const c = data[4]['books'];
 
-    const shoppingList = [...a, ...b, ...c];
+//     const shoppingList = [...a, ...b, ...c];
 
-    const shoppingListToSave = shoppingList.reduce((acc, item) => {
-      acc.push({
-        id: item._id,
-        title: item.title,
-        author: item.author,
-        image: item['book_image'],
-        description: item.description,
-        category: item['list_name'],
-        links: item['buy_links'],
-      });
+//     const shoppingListToSave = shoppingList.reduce((acc, item) => {
+//       acc.push({
+//         id: item._id,
+//         title: item.title,
+//         author: item.author,
+//         image: item['book_image'],
+//         description: item.description,
+//         category: item['list_name'],
+//         links: item['buy_links'],
+//       });
 
-      return acc;
-    }, []);
+//       return acc;
+//     }, []);
 
-    window.localStorage.setItem(
-      'shoppingList',
-      JSON.stringify(shoppingListToSave)
-    );
-  } catch (error) {
-    console.log(error);
-  }
-}
+//     window.localStorage.setItem(
+//       'shoppingList',
+//       JSON.stringify(shoppingListToSave)
+//     );
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
 
-qwe();
+// qwe();
 
 ///////////////////////////////////////////
 export default function createMarkupShoppingList(visibleBooks) {
   const booksList = refs.booksInShoppingList;
 
   const markup = visibleBooks
-    .map(({ id, author, title, image, description, category, links }) => {
-      return ` 
+    .map(
+      ({
+        _id: id,
+        author,
+        title,
+        book_image: image,
+        description,
+        category,
+        buy_links: links,
+      }) => {
+        return ` 
       <li class="books-card" id=${id}>
         <img
           class="books-card__image"
@@ -78,7 +87,8 @@ export default function createMarkupShoppingList(visibleBooks) {
         </button>
       </li>
     `;
-    })
+      }
+    )
     .join('');
 
   booksList.innerHTML = markup;
