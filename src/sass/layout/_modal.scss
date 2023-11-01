@@ -133,6 +133,8 @@
   font-weight: 700;
   font-size: 14px;
 
+  transition: all 300ms;
+
   @include tablet {
     padding: 20px 0;
     line-height: 1.33;
@@ -161,7 +163,6 @@
   display: flex;
   gap: 20px;
   align-items: center;
-  justify-content: center;
   height: 100%;
   filter: grayscale(100%);
 }
