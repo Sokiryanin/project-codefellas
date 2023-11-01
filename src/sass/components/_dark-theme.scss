@@ -1,0 +1,132 @@
+.dark-theme {
+  background-color: var(--background-main-darkTheme);
+
+  // header
+  & .header {
+    background-color: var(--background-darkTheme);
+    border-color: var(--white);
+
+    & .header__logo-text-svg {
+      fill: var(--logo-color-darkTheme);
+    }
+
+    & .navigation__link {
+      color: var(--white);
+    }
+
+    & .navigation__link.is-active {
+      color: var(--main-textcolor);
+    }
+
+    & .navigation__link svg {
+      fill: var(--white);
+    }
+
+    & .navigation__link.is-active svg {
+      fill: var(--main-textcolor);
+    }
+
+    & .burger-btn {
+      fill: var(--white);
+      transition: fill 300ms;
+
+      &:hover,
+      &:focus {
+        fill: var(--main-color);
+      }
+    }
+  }
+
+  // container
+  & h1,
+  & h2,
+  & h3:not(.best-category__item-title),
+  & .category__item-title,
+  & .empty-shoping-list__text {
+    color: var(--white);
+  }
+
+  // category list
+  & .categories {
+    * {
+      scrollbar-color: var(--main-textcolor) transparent;
+    }
+
+    *::-webkit-scrollbar-thumb {
+      background-color: var(--main-textcolor);
+    }
+  }
+
+  & .categories__list span {
+    color: var(--light-text);
+  }
+
+  & .categories__list span.current {
+    color: var(--accent-color);
+  }
+
+  // buttons in gallery
+  & .seemore__btn {
+    color: var(--white);
+  }
+
+  // chopping list`s book card
+  & .books-card {
+    background-color: var(--background-darkTheme);
+  }
+
+  & .books-card .books-card__description {
+    color: var(--white);
+  }
+
+  // pagination
+  & .tui-pagination .button {
+    color: var(--white);
+    border-color: var(--pagination-color-dark);
+
+    &.disabled {
+      fill: var(--white);
+      background-color: var(--pagination-color-dark);
+    }
+
+    &.selected {
+      color: var(--main-textcolor);
+      background-color: var(--white);
+    }
+  }
+
+  & .tui-pagination .page {
+    background-color: var(--background-main);
+    background-color: var(--pagination-color-dark);
+    border-color: var(--white);
+  }
+
+  // modal window
+  & .modal__container {
+    background-color: var(--background-main-darkTheme);
+    border-color: var(--white);
+  }
+
+  & .modal__content-title,
+  & .modal__content-description {
+    color: var(--white);
+  }
+
+  & .modal__button {
+    color: var(--white);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: var(--main-color);
+    }
+  }
+
+  & .modal__container svg {
+    stroke: var(--white);
+  }
+
+  & .modal__user-info {
+    color: var(--light-text);
+  }
+}
