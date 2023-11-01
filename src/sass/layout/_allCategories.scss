@@ -29,6 +29,26 @@
       color: #4f2ee8;
     }
   }
+  // Стилізація скрола
+  /* Працює у Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--light-text) transparent;
+  }
+
+  /* Працює у Chrome, Edge и Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--light-text);
+    border-radius: 12px;
+  }
 }
 
 a.current {
