@@ -1,3 +1,4 @@
+import './js/switchTheme';
 import './js/modal';
 import './js/burger-menu';
 import './js/fetch';
