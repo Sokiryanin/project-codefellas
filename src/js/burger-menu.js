@@ -24,5 +24,8 @@ window.addEventListener('resize', () => {
     refs.btnOpenMenuIcon.classList.toggle('is-open');
     refs.btnCloseMenuIcon.classList.toggle('is-close');
     refs.navigation.classList.remove('burger-navigation');
+  } else {
+    refs.btnOpenMenuIcon.classList.toggle('is-open');
+    refs.btnCloseMenuIcon.classList.toggle('is-close');
   }
 });
