@@ -73,7 +73,7 @@ export default function createMarkupShoppingList(visibleBooks) {
             <p class="books-card__author">${author}</p>
             <div class="wrapper-links">
               <a href=${links[0].url} target="_blank" class="books-card__link">
-                <img src=${amazon} alt="Amazon" class="books-card__image-amazon" />
+                <div class="books-card__image-amazon"></div>
               </a>
 
               <a href=${links[1].url} target="_blank" class="books-card__link">
