@@ -1,3 +1,4 @@
+import './js/switchTheme';
 import './js/burger-menu';
 import './js/support';
 import './js/createMarkupShoppingList';

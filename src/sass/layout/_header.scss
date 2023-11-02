@@ -15,6 +15,10 @@
     gap: 8px;
   }
 
+  &__logo-text-svg {
+    fill: var(--logo-main-color);
+  }
+
   &__buttons {
     display: flex;
     align-items: center;
@@ -94,7 +98,7 @@ input[type='checkbox'].toggle:checked + label::before {
 }
 
 input[type='checkbox'].toggle:checked + label::after {
-  transform: translateX(100%);
+  transform: translateX(115%);
 }
 
 input[type='checkbox'].toggle:disabled + label {

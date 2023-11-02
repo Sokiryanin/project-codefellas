@@ -1,5 +1,6 @@
 export const refs = {
   body: document.body,
+  switcherTheme: document.querySelector('.toggle'),
   categoriesList: document.querySelector('.categories__list-js'),
   selectedCattegory: document.querySelector('.selected-category__container'),
   booksInShoppingList: document.querySelector('.books-list'),

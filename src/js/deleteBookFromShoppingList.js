@@ -17,7 +17,7 @@ function deleteBookFromShoppingList(event) {
 
     const bookId = event.target.id;
 
-    const newShoppingList = shoppingList.filter(book => book.id !== bookId);
+    const newShoppingList = shoppingList.filter(book => book._id !== bookId);
 
     localStorage.setItem(
       SHOPPING_LIST_LOCAL_STOR,

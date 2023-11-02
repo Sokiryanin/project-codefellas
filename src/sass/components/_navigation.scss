@@ -49,6 +49,18 @@
   letter-spacing: -0.56px;
   text-transform: uppercase;
 
+  @media screen and(max-width: 767px) {
+    color: var(--white);
+
+    &.is-active {
+      color: var(--main-textcolor);
+    }
+
+    & svg {
+      color: inherit;
+    }
+  }
+
   color: var(--main-textcolor);
 
   &.is-active {
