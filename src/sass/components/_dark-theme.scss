@@ -79,6 +79,11 @@
     color: var(--white);
   }
 
+  & .books-card__image-amazon,
+  & .modal__amazon-img {
+    background-image: url('../images/amazon-for-dark.png');
+  }
+
   // pagination
   & .tui-pagination .button {
     color: var(--white);

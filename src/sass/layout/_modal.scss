@@ -182,9 +182,17 @@
   }
 }
 
+.modal__amazon-img {
+  width: 62px;
+  height: 19px;
+  background-image: url('../images/amazon.png');
+  background-size: cover;
+}
+
 .modal__link-img {
   display: block;
-  height: 25px;
+  width: 33px;
+  height: 32px;
 }
 
 .modal__link-img:hover,
