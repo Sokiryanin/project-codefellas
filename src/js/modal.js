@@ -19,7 +19,6 @@ export function showModal() {
     // Загружаем информацию о книге по её ID
     getBookById(elId)
       .then(resp => {
-        console.log(resp);
         updateModalContent(resp);
         updateShoppingButton(resp._id); // Используем _id из ответа сервера
         openModal();
@@ -117,7 +116,8 @@ function buttonChange() {
       { url: refs.modalLinkApple.getAttribute('href') },
       { url: refs.modalLinkShop.getAttribute('href') },
     ],
-    _id: selectedBook._id,
+    id: selectedBook._id,
+    category: selectedBook.list_name,
   };
 
   const shoppingList = JSON.parse(localStorage.getItem(storageKey)) || [];
