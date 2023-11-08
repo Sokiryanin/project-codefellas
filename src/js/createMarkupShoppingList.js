@@ -4,51 +4,13 @@ import amazon from '../images/amazon.png';
 import appleBooks from '../images/appleshop.png';
 import svg from '../images/icon-trash.svg';
 
-// async function qwe() {
-//   try {
-//     const { data } = await axios.get(
-//       'https://books-backend.p.goit.global/books/top-books'
-//     );
-
-//     const a = data[1]['books'];
-//     const b = data[2]['books'];
-//     const c = data[4]['books'];
-
-//     const shoppingList = [...a, ...b, ...c];
-
-//     const shoppingListToSave = shoppingList.reduce((acc, item) => {
-//       acc.push({
-//         id: item._id,
-//         title: item.title,
-//         author: item.author,
-//         image: item['book_image'],
-//         description: item.description,
-//         category: item['list_name'],
-//         links: item['buy_links'],
-//       });
-
-//       return acc;
-//     }, []);
-
-//     window.localStorage.setItem(
-//       'shoppingList',
-//       JSON.stringify(shoppingListToSave)
-//     );
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-// qwe();
-
-///////////////////////////////////////////
 export default function createMarkupShoppingList(visibleBooks) {
   const booksList = refs.booksInShoppingList;
 
   const markup = visibleBooks
     .map(
       ({
-        _id: id,
+        id,
         author,
         title,
         book_image: image,

@@ -42,9 +42,7 @@ function currentCategory(e) {
 
   if (currentEl.textContent === 'All categories') {
     renderCategory();
-    // console.log('BestBooks');
   } else {
     onClickCategory(e.target.textContent);
-    // console.log('Another category');
   }
 }
