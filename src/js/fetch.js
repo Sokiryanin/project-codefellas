@@ -22,7 +22,6 @@ export async function getTopBooks() {
 // return choose category
 export async function getByCategory(categoryName) {
   return axios.get(`${getCategory}?category=${categoryName}`).then(response => {
-    console.log(response.data);
     return response.data;
   });
 }

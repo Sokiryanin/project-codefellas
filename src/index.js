@@ -6,3 +6,4 @@ import './js/allCategories';
 import './js/support';
 import './js/bestBooks';
 import './js/selectedCategory';
+import './js/button-scroll-up';
