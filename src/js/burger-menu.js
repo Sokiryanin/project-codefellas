@@ -21,11 +21,8 @@ window.addEventListener('resize', () => {
 
   if (screenWidth > 767) {
     refs.burgerMenu.classList.remove('is-open');
-    refs.btnOpenMenuIcon.classList.toggle('is-open');
-    refs.btnCloseMenuIcon.classList.toggle('is-close');
+    refs.btnOpenMenuIcon.classList.remove('is-open');
+    refs.btnCloseMenuIcon.classList.add('is-close');
     refs.navigation.classList.remove('burger-navigation');
-  } else {
-    refs.btnOpenMenuIcon.classList.toggle('is-open');
-    refs.btnCloseMenuIcon.classList.toggle('is-close');
   }
 });
