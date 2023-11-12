@@ -29,7 +29,10 @@ export default function createMarkupShoppingList(visibleBooks) {
         <div class="books-card__info">
           <h2 class="books-card__title">${title}</h2>
           <p class="books-card__category">${category}</p>
-          <p class="books-card__description">${description}</p>
+          <div class="books-card__description">
+            <p class="books-card__description-text">${description}</p>
+          </div>
+          
 
           <div class="wrapper">
             <p class="books-card__author">${author}</p>
