@@ -32,9 +32,7 @@
 }
 
 .books-card__info {
-  @include tablet {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .books-card__title {
@@ -82,11 +80,6 @@
   margin-bottom: 26px;
   height: 3.5rem;
 
-  line-height: 1.29;
-  letter-spacing: -0.56px;
-
-  color: var(--main-textcolor);
-
   overflow: hidden;
   //   text-overflow: ellipsis;
 
@@ -102,6 +95,13 @@
   @include tablet {
     margin-bottom: 32px;
   }
+}
+
+.books-card__description-text {
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+
+  color: var(--main-textcolor);
 }
 
 .wrapper {
@@ -142,7 +142,8 @@
   filter: grayscale(100%);
 
   background-image: url('../images/amazon.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   &:hover,
   &:focus {
