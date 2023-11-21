@@ -32,7 +32,7 @@ export function showModal() {
   }
 
   function updateModalContent(bookData) {
-    const { author, title, description, book_image, buy_links, _id } = bookData;
+    const { author, title, description, book_image, buy_links } = bookData;
 
     refs.modalAuthor.textContent = author;
     refs.modalTitle.textContent = title;
@@ -45,7 +45,7 @@ export function showModal() {
 
   function updateShoppingButton(_id) {
     const shoppingList = JSON.parse(localStorage.getItem(storageKey)) || [];
-    const bookIndex = shoppingList.findIndex(item => item._id === _id);
+    const bookIndex = shoppingList.findIndex(item => item.id === _id);
 
     if (bookIndex === -1) {
       refs.modalButton.textContent = 'Add to shopping list';
