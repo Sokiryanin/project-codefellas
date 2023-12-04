@@ -1,4 +1,5 @@
 import './js/switchTheme';
+import './js/spinner';
 import './js/modal';
 import './js/burger-menu';
 import './js/fetch';

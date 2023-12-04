@@ -2,6 +2,7 @@ import { getTopBooks } from './fetch';
 import { showModal } from './modal';
 import { refs } from './refs';
 import { markLastWord, onClickCategory } from './selectedCategory';
+import { spinerPlay, spinerStop } from './spinner';
 
 function renderBooks(mark) {
   refs.selectedCattegory.innerHTML = mark;
@@ -37,6 +38,7 @@ function renderBookCard(book) {
 renderCategory();
 
 export function renderCategory() {
+  spinerPlay();
   getTopBooks()
     .then(response => {
       const markup = `<div class=" best-category__container"><h2 class="best-category__title title-category__list">
@@ -46,6 +48,7 @@ export function renderCategory() {
         .map(renderBookCard)
         .join('')}</ul></div>`;
       renderBooks(markup);
+      spinerStop();
     })
     .catch(error => {
       console.log('Помилка при отриманні даних з сервера:', error);
