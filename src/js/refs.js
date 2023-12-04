@@ -1,5 +1,7 @@
 export const refs = {
   body: document.body,
+  spinner: document.querySelector('.js-spinner'),
+  load: document.querySelector('[data-load]'),
   switcherTheme: document.querySelector('.toggle'),
   categoriesList: document.querySelector('.categories__list-js'),
   selectedCattegory: document.querySelector('.selected-category__container'),

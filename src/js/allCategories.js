@@ -2,7 +2,7 @@ import { renderCategory } from './bestBooks';
 import { getAllCategories } from './fetch';
 import { refs } from './refs';
 import { onClickCategory } from './selectedCategory';
-
+import { spinerPlay, spinerStop } from './spinner';
 const list = refs.categoriesList;
 
 function renderCategoryList() {
